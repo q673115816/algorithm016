@@ -24,8 +24,9 @@ var MyCircularDeque = function (k) {
  */
 MyCircularDeque.prototype.insertFront = function (value) {
     if (this.isFull()) return false
-    this.arr[this.head] = value
+    // 前插补一个位不然尾指针也指同一个指
     this.head = (this.head + this.size - 1) % this.size
+    this.arr[this.head] = value
     this.count++
     return true
 };
@@ -38,7 +39,7 @@ MyCircularDeque.prototype.insertFront = function (value) {
 MyCircularDeque.prototype.insertLast = function (value) {
     if (this.isFull()) return false
     this.arr[this.tail] = value
-    this.tail = (this.tail + this.size - 1) % this.size
+    this.tail = (this.tail + this.size + 1) % this.size
     this.count++
     return true
 };
