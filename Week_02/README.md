@@ -6,6 +6,7 @@
 有效的字母异位词（亚马逊、Facebook、谷歌在半年内面试中考过）  
 > 创建hash表计算出现次数最终是否归零  
 >> 进阶uninode 不定大小的hash表，js没有大小  
+
 两数之和（近半年内，亚马逊考查此题达到 216 次、字节跳动 147 次、谷歌 104 次，Facebook、苹果、微软、腾讯也在近半年内面试常考）  
 N 叉树的前序遍历（亚马逊在半年内面试中考过）  
 HeapSort ：自学 https://www.geeksforgeeks.org/heap-sort/  
