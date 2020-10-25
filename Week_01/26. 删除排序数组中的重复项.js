@@ -1,24 +1,26 @@
+/*
+ * @lc app=leetcode.cn id=26 lang=javascript
+ *
+ * [26] 删除排序数组中的重复项
+ */
+
+// @lc code=start
 /**
  * @param {number[]} nums
  * @return {number}
  */
 var removeDuplicates = function (nums) {
-    let curr = 0
-    let i = 1
-    let n = nums.length
-    while (i < n) {
-        if (nums[i] !== nums[curr]) {
-            // 避免相邻复制，提升不是很大
-            // if(curr + 1 === i) {
-            //     curr++
-            //     i++
-            //     continue
-            // }
-            nums[++curr] = nums[i]
+    let left = 0
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[left] !== nums[i]) {
+            if (left + 1 === i) {
+                left++
+                continue
+            }
+            nums[++left] = nums[i]
         }
-        i++
     }
-    return curr + 1
+    return left + 1
 };
+// @lc code=end
 
-removeDuplicates([0, 0, 1, 1, 1, 2, 2, 3, 3, 4])
